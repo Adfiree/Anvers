@@ -1,0 +1,30 @@
+site_name: Le contexte CUB Anvers
+site_url: https://adfiree.github.io/anvers
+theme:
+  name: material
+  logo: ./media/cub/logo.png
+  favicon: ./media/cub/favicon.png
+  language: fr
+  features:
+    - navigation.footer
+    - content.code.copy
+markdown_extensions:
+  - admonition
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - md_in_html
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.tabbed:
+      alternate_style: true

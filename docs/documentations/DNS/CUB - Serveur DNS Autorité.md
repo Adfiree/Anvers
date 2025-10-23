@@ -63,17 +63,17 @@ Le fichier **hostname** sert à donner un nom à votre serveur.
 
 - sudoedit /etc/hostname
 
-![]![](../../media/a8.png)
+![](../../media/a8.png)
 
 - sudoedit /etc/hosts
 
-![]![](../../media/a9.png)
+![](../../media/a9.png)
 
 Il est nécessaire de redémarrer le serveur pour prendre en compte le changement de nom.
 
 - sudo shutdown \-r now
 
-![]![](../../media/a10.png)
+![](../../media/a10.png)
 
 #### 6 - Exemple de configuration d'un serveur DNS maître faisant autorité
 
@@ -83,60 +83,60 @@ Il est nécessaire de redémarrer le serveur pour prendre en compte le changemen
 
 - sudo nano /etc/bind/named.conf.options
 
-![]![](../../media/a12.png)
+![](../../media/a12.png)
 
 - sudoedit /etc/bind/named.conf.local
 
-![]![](../../media/a13.png)
+![](../../media/a13.png)
 
 Ce fichier sert à déclarer les zones que vous aurez à gérer. Votre serveur peut-être maître sur une zone ou esclave. La directive file sert à déclarer le fichier de zone contenant les enregistrements liés (SOA, NS, A…). La directive allow-transfer permet de déclarer les serveurs esclaves habilités.
 
 - sudoedit /var/cache/bind/db.anvers.cub.sioplc.fr
 
-![]![](../../media/a14.png)
+![](../../media/a14.png)
 
 - sudo chown bind:bind /var/cache/bind/db.anvers.cub.sioplc.fr
 
-![]![](../../media/a15.png)
+![](../../media/a15.png)
 
 Mise en place d’une journalisation des événements du service DNS
 
 - sudoedit /etc/bind/named.conf.log
 
-![]![](../../media/a16.png)
+![](../../media/a16.png)
 
 Ce fichier permet d'activer la journalisation des évènements pour le service DNS. Vous pouvez préciser le niveau de verbosité avec la directive severity mais aussi la taille maximale du fichier de log. Comme pour le fichier de zone esclave, il est nécessaire de créer un fichier vide de log avec les bonnes permissions au préalable
 
 - sudo touch /var/log/bind.log
 
-![]![](../../media/a17.png)
+![](../../media/a17.png)
 
 - sudo chown bind:bind /var/log/bind.log
 
-![]![](../../media/a18.png)
+![](../../media/a18.png)
 
 Enfin, on n’oublie pas de déclarer ce nouveau fichier de configuration dans /etc/bind/named.conf.
 
 - sudoedit /etc/bind/named.conf
 
-![]![](../../media/a19.png)
+![](../../media/a19.png)
 
 - sudoedit /etc/apparmor.d/usr.sbin.named
 
-![]![](../../media/a20.png)
+![](../../media/a20.png)
 
 On vérifie que le nouveau fichier de configuration de AppArmor ne contient pas d’erreurs puis on redémarre le service.
 
 - sudo apparmor\_parser \-r /etc/apparmor.d/usr.sbin.named  
 - sudo systemctl restart apparmor
 
-![]![](../../media/a21.png)
+![](../../media/a21.png)
 
 - sudo named-checkconf \-z  
 - sudo systemctl restart bind9  
 - sudo systemctl status bind9
 
-![]![](../../media/a22.png)
+![](../../media/a22.png)
 
 Voilà, notre serveur DNS faisant autorité maître est opérationnel \!\!
 
@@ -153,20 +153,20 @@ Test du Sérial SOA
 - dig 192.36.1.10 [anvers.cub.sioplc.fr](http://anvers.cub.sioplc.fr) SOA \+short
 
 Cette commande permet de voir le numéro SERIAL de votre DNS, le but est que le DNS esclave ai le même SERIAL que le maître comme ci dessous :  
-![]![](../../media/a24.png)
+![](../../media/a24.png)
 
-![]![](../../media/a25.png)
+![](../../media/a25.png)
 
-![]![](../../media/a26.png)
+![](../../media/a26.png)
 
-![]![](../../media/a27.png)
+![](../../media/a27.png)
 
-![]![](../../media/a28.png)
+![](../../media/a28.png)
 
 Test pour les serveur DNS Récursif :
 
-![]![](../../media/a29.png)
+![](../../media/a29.png)
 
-![]![](../../media/a30.png)
+![](../../media/a30.png)
 
 Nos serveurs DNS Maître et esclave sont maintenant opérationnels.

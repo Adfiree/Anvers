@@ -135,6 +135,7 @@ Nous avons vérifier le status du dépôt
 Question 30  
 
 ![](../../media/s2-20.png) 
+
 Nous avons poussé et validé le contenu de notre dépôt local vers le dépôt distant
 
 Question 31  

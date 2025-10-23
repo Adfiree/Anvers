@@ -1,4 +1,4 @@
-# Situation n°2 CUB - Git
+# Situation n°3 CUB - Introduction Powershell
 
 **Auteur :** Andy REMY  
 **Date de création :** 1/10/2025  

@@ -1,4 +1,4 @@
-# Serveur DNS Autorité ANDY
+# Serveur DNS Autorité (Maître) ANDY
 
 **Auteurs :** Andy REMY
 **Date de création :** 09/10/2025

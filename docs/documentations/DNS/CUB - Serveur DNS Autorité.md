@@ -146,7 +146,7 @@ Test de la résolution DNS
 
 - dig 192.36.1.10 anvers.cub.sioplc.fr
 
-![]![](../../media/a23.png)
+![](../../media/a23.png)
 
 Test du Sérial SOA
 

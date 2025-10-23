@@ -19,7 +19,7 @@ nav:
           - DNS:
               - DNS0 - Récursif - CUB: documentations/DNS/CUB - Serveur DNS Recursif.md
           - Situations:
-              - SituationO - AdminServ - CUB: documentations/Situations/Situation n°0 CUB – Plan d'adressage - Schéma logique & physique - Table de routage - NAT.md
+              - Situation n°O - CUB: documentations/Situations/Situation n°0 CUB – Plan d'adressage - Schéma logique & physique - Table de routage - NAT.md
       
 markdown_extensions:
   - toc:

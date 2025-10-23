@@ -1,5 +1,5 @@
 site_name: Le contexte CUB Anvers
-site_url: https://Andy-Remy.github.io/anvers
+site_url: https://adfiree.github.io/anvers
 theme:
   name: material
   logo: media/CUB.png
@@ -15,12 +15,11 @@ nav:
   - Accueil: index.md
 
   - CUB Anvers:
-      - contexte: documentations/DNS/Situation n°0 CUB – Plan d'adressage - Schéma logique & physique - Table de routage - NAT.md
       - Documentation:
           - DNS:
-              - DNS0 - Récursif - CUB: documentations/DNS/CUB - Serveur DNS Recursif.md
+              - DNS0 - Récursif - CUB: docs/documentations/DNS/CUB-Serveur-DNS0-Recursif.md
           - Situations:
-              - SituationO - AdminServ - CUB: 
+              - SituationO - AdminServ - CUB: docs/documentations/Situations/Plan-dadressage-Schéma-logique&physique-Table-de-routage-NAT.md
       
 markdown_extensions:
   - toc:

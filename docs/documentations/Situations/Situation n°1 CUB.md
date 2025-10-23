@@ -1,4 +1,4 @@
-# Situation n°1 CUB
+# Situation n°1 CUB - Connexion SSH + RDP avec l'utilisateur AdminSSH
 
 **Auteur :** Andy REMY  
 **Date de création :** 17/09/2025  

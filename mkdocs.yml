@@ -15,13 +15,12 @@ nav:
   - Accueil: index.md
 
   - CUB Anvers:
-      - contexte:
-          - Contexte - CUB: documentations/DNS/Situation n°0 CUB – Plan d'adressage - Schéma logique & physique - Table de routage - NAT.md
+      - contexte: documentations/DNS/Situation n°0 CUB – Plan d'adressage - Schéma logique & physique - Table de routage - NAT.md
       - Documentation:
           - DNS:
               - DNS0 - Récursif - CUB: documentations/DNS/CUB - Serveur DNS Recursif.md
           - Situations:
-              - SituationO - AdminServ - CUB: documentations/Situations/Situation n°0 CUB – Plan d'adressage - Schéma logique & physique - Table de routage - NAT.md
+              - SituationO - AdminServ - CUB: 
       
 markdown_extensions:
   - toc:

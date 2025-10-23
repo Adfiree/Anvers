@@ -11,10 +11,10 @@
 ## 1 Réaliser un “sysprep” afin de réinitialiser le SID de l’OS Windows 2019
 
 Pour commencer, réaliser un clique droit sur le logo windows, puis cliquer sur Exécuter  
-![][image2]
+![1](../../media/s1-1.png)
 
 Maintenant, taper sysprep puis cliquer sur OK  
-![][image3]
+![2][image3]
 
 Maintenant, il suffit de lancer Sysprep puis de relancer le serveur  
 ![][image4]

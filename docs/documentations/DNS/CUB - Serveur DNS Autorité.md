@@ -1,4 +1,4 @@
-# Serveur DNS Recursif ANDY
+# Serveur DNS Autorité ANDY
 
 **Auteurs :** Andy REMY
 **Date de création :** 09/10/2025

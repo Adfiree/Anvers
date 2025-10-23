@@ -76,7 +76,7 @@ Ce qu’il faut savoir, c’est que le Vlan est déjà directement associé au p
 **nom** : adminssh       **mot de passe** : Cub\_Admin\_Ssh\_007  
 Cliquer sur créer \!
 
-## 6 Interdir une connexion SSH avec l’utilisateur “administrateur
+## 6 Interdir une connexion SSH avec l’utilisateur “administrateur"
 
 Dans le fichier de configuration, il faut commenter les deux lignes suivantes, sinon la directive DenyGroups ne fonctionne pas 
 ![](../../media/s1-17(1).png) 

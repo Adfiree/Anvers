@@ -33,6 +33,7 @@ Pour commencer, il suffit de se rendre dans la rubrique Serveur local puis de li
 
 Ensuite, cliquer sur modifier pour renommer le serveur  
 ![](../../media/s1-7.png) 
+
 Maintenant, il suffit de renseigner le nom du serveur de votre choix et cliquer sur OK puis redémarrer la machine  
 ![](../../media/s1-8.png)
 

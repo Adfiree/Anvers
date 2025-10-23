@@ -18,6 +18,7 @@ nav:
       - Documentations:
           - DNS:
               - DNS0 - Récursif - CUB: documentations/DNS/CUB - Serveur DNS Recursif.md
+              - NS0 - Autorité - CUB: documentations/DNS/CUB - Serveur DNS Autorité.md
           - Situations:
               - Situation n°O - CUB: documentations/Situations/Situation n°0 CUB – Plan d'adressage - Schéma logique & physique - Table de routage - NAT.md
               - Situation n°1 - CUB: documentations/Situations/Situation n°1 CUB.md

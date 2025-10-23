@@ -16,7 +16,7 @@ nav:
 
   - CUB Anvers:
       - contexte:
-          - Contexte - CUB: documentations/DNS/CUB - Serveur DNS Recursif.md
+          - Contexte - CUB: documentations/DNS/Situation n°0 CUB – Plan d'adressage - Schéma logique & physique - Table de routage - NAT.md
       - Documentation:
           - DNS:
               - DNS0 - Récursif - CUB: documentations/DNS/CUB - Serveur DNS Recursif.md

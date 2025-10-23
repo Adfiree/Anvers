@@ -79,7 +79,7 @@ Il est nécessaire de redémarrer le serveur pour prendre en compte le changemen
 
 - sudo cat /etc/bind/named.conf
 
-![]![](../../media/a11.png)
+![](../../media/a11.png)
 
 - sudo nano /etc/bind/named.conf.options
 

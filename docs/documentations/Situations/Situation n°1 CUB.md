@@ -6,7 +6,7 @@
 ---
 ![Logo CUB](../../media/CUB.png)
 
-## Administration des systèmes
+# Administration des systèmes
 
 # 1 Réaliser un “sysprep” afin de réinitialiser le SID de l’OS Windows 2019
 

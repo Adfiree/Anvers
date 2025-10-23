@@ -15,7 +15,7 @@ nav:
   - Accueil: index.md
 
   - CUB Anvers:
-      - Documentation:
+      - Documentations:
           - DNS:
               - DNS0 - Récursif - CUB: documentations/DNS/CUB - Serveur DNS Recursif.md
           - Situations:

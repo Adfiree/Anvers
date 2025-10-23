@@ -20,7 +20,7 @@ Maintenant, il suffit de lancer Sysprep puis de relancer le serveur
 ![](../../media/s1-3.png)
 
 Pour savoir si le SID a bien été modifié, il suffit de réaliser cette commande dans le CMD :   
-wmic useraccount get name,sid  
+- wmic useraccount get name,sid  
 ![](../../media/s1-4.png)
 
 Voici le SID de mon binôme. Nous voyons bien qu’il est différent du mien  
@@ -80,9 +80,8 @@ Cliquer sur créer \!
 Dans le fichier de configuration, il faut commenter les deux lignes suivantes, sinon la directive DenyGroups ne fonctionne pas 
 ![](../../media/s1-17(1).png) 
 
-
-
 Pour autoriser seulement mon utilisateur adminssh, j’ai ajouté dans mon document text ceci : 
+ 
 ![](../../media/s1-18(2).png)
 
 Redémarrez le service SSH et tentez de vous connecter à votre serveur avec un compte administrateur, l'accès **doit être refusé \!**
@@ -111,6 +110,7 @@ Je vous invite à en profiter pour désactiver la règle créée par défaut pui
 ## 8 Installer l’accès à distance au serveur Windows 2019 via le protocole RDP
 
 Sur Windows Server, l'accès "**Bureau à distance**" que l'on appelle couramment l'accès RDP s'active à partir du "**Gestionnaire de serveur**". Dans la section "**Serveur local**", il y a un paramètre nommé "Bureau à distance" qui indique l'état du service. Lorsque c'est désactivé (valeur par défaut), il n'est pas possible de se connecter en RDP sur la machine, mais cette même machine peut se connecter sur une autre machine où le Bureau à distance est actif.
+
 ![](../../media/s1-20.png)
 
 ![](../../media/s1-21.png)
@@ -123,8 +123,8 @@ Pour cela, lancer l’application : Connexion Bureau à distance de windows
 ![](../../media/s1-22.png)
 
 Il suffit de renseigner l’ip de notre serveur pour son nom et le nom complet de de l’utilisateur
-
 Pour le moment, nous allons utiliser l'utilisateur **“Administrateur”**
+
 ![](../../media/s1-23.png)
 
 ## 9 Tester la connexion RDP pour le compte “adminssh”

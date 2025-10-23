@@ -6,9 +6,9 @@
 ---
 ![Logo CUB](../../media/CUB.png)
 
-# Administration des systèmes
+## Administration des systèmes
 
-# 1 Réaliser un “sysprep” afin de réinitialiser le SID de l’OS Windows 2019
+## 1 Réaliser un “sysprep” afin de réinitialiser le SID de l’OS Windows 2019
 
 Pour commencer, réaliser un clique droit sur le logo windows, puis cliquer sur Exécuter  
 ![][image2]
@@ -26,7 +26,7 @@ wmic useraccount get name,sid
 Voici le SID de mon binôme. Nous voyons bien qu’il est différent du mien  
 ![][image6]
 
-# 2 Changer le nom de votre serveur : ServeurPrimaire1
+## 2 Changer le nom de votre serveur : ServeurPrimaire1
 
 Pour commencer, il suffit de se rendre dans la rubrique Serveur local puis de liquer sur le nom de l’ordinateur en bleu  
 ![][image7]
@@ -36,12 +36,12 @@ Ensuite, cliquer sur modifier pour renommer le serveur
 Maintenant, il suffit de renseigner le nom du serveur de votre choix et cliquer sur OK puis redémarrer la machine  
 ![][image9]
 
-# 3 Modifier le mot de passe du compte Administrateur Local
+## 3 Modifier le mot de passe du compte Administrateur Local
 
 Après que la machine ait redémarré, cela nous a demandé de modifier le mot de passe de l’administrateur Local au démarrage.   
 Dans le cadre de la situation, nous avons choisi : An.Mat\_2006\!
 
-# 4 Modifier le Vlan et l’adresse IP de votre serveur
+## 4 Modifier le Vlan et l’adresse IP de votre serveur
 
 Pour commencer, il suffit de se rendre toujours dans la rubrique Serveur local, puis cliquer sur l’adresse IP en bleu à côté de Ethernet  
 ![][image10]
@@ -57,7 +57,7 @@ Maintenant, il suffit de renseigner l’adresse IP de son choix puis de cliquer 
 
 Ce qu’il faut savoir, c’est que le Vlan est déjà directement associé au projet que nous sélectionnons quand on crée la VM sous Nutanix \!
 
-# 5 Créer un nouvel utilisateur sous Windows 2019
+## 5 Créer un nouvel utilisateur sous Windows 2019
 
 1 : Aller dans paramètre, puis dans Comptes  
 ![][image14]  
@@ -73,7 +73,7 @@ Ce qu’il faut savoir, c’est que le Vlan est déjà directement associé au p
 nom : adminssh       mot de passe : Cub\_Admin\_Ssh\_007  
 Cliquer sur créer \!
 
-# 6 Interdir une connexion SSH avec l’utilisateur “administrateur
+## 6 Interdir une connexion SSH avec l’utilisateur “administrateur
 
 Dans le fichier de configuration, il faut commenter les deux lignes suivantes, sinon la directive DenyGroups ne fonctionne pas 
 
@@ -85,13 +85,13 @@ Pour autoriser seulement mon utilisateur adminssh, j’ai ajouté dans mon docum
 
 Redémarrez le service SSH et tentez de vous connecter à votre serveur avec un compte administrateur, l'accès **doit être refusé \!**
 
-## **Tester la connexion SSH pour l’utilisateur “adminssh”,** {#tester-la-connexion-ssh-pour-l’utilisateur-“adminssh”,}
+### **Tester la connexion SSH pour l’utilisateur “adminssh”,** {#tester-la-connexion-ssh-pour-l’utilisateur-“adminssh”,}
 
 Voici le test pour me connecter en SSH avec le nouvel utilisateur : **adminssh**
 
 ![][image21]
 
-# 7 Modifier le port d’écoute par défaut ssh en 222
+## 7 Modifier le port d’écoute par défaut ssh en 222
 
 Ensuite, il faut décommenter la ligne "*\#Port 22*" et changer le numéro de port, comme ceci :
 
@@ -109,7 +109,7 @@ Je vous invite à en profiter pour désactiver la règle créée par défaut pui
 
 ![][image23]
 
-# 8 Installer l’accès à distance au serveur Windows 2019 via le protocole RDP
+## 8 Installer l’accès à distance au serveur Windows 2019 via le protocole RDP
 
 Sur Windows Server, l'accès "**Bureau à distance**" que l'on appelle couramment l'accès RDP s'active à partir du "**Gestionnaire de serveur**". Dans la section "**Serveur local**", il y a un paramètre nommé "Bureau à distance" qui indique l'état du service. Lorsque c'est désactivé (valeur par défaut), il n'est pas possible de se connecter en RDP sur la machine, mais cette même machine peut se connecter sur une autre machine où le Bureau à distance est actif.
 
@@ -121,7 +121,7 @@ Il ne reste plus qu'à cliquer sur "OK" \! L'effet est immédiat. Si cela ne fon
 
 Pour cela, lancer l’application : Connexion Bureau à distance de windows
 
-## **Tester l’accès à distance au serveur Windows 2019 via le protocole RDP** {#tester-l’accès-à-distance-au-serveur-windows-2019-via-le-protocole-rdp}
+### **Tester l’accès à distance au serveur Windows 2019 via le protocole RDP** {#tester-l’accès-à-distance-au-serveur-windows-2019-via-le-protocole-rdp}
 
 ![][image26]
 
@@ -133,7 +133,7 @@ Pour le moment, nous allons utiliser l'utilisateur **“Administrateur”**
 
 # 
 
-# 9 Tester la connexion RDP pour le compte “adminssh”
+## 9 Tester la connexion RDP pour le compte “adminssh”
 
 Afin de se connecter à distance via l’utilisateur “adminssh”, il suffit d’ajouter cet utilisateur pour avoir les droit de connexion à distance avec ce compte
 

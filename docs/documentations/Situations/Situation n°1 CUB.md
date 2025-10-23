@@ -59,18 +59,21 @@ Ce qu’il faut savoir, c’est que le Vlan est déjà directement associé au p
 
 ## 5 Créer un nouvel utilisateur sous Windows 2019
 
-1 : Aller dans paramètre, puis dans Comptes  
-![][image14]  
-2 \- Aller dans l’onglet Autres utilisateurs puis cliquer sur Ajouter un autre utilisateur sur ce PC  
+#### 1 : Aller dans paramètre, puis dans Comptes  
+![][image14] 
+
+#### 2 \- Aller dans l’onglet Autres utilisateurs puis cliquer sur Ajouter un autre utilisateur sur ce PC  
 ![][image15]  
-3 \- Maintenant, dans le dossier Utilisateurs, réaliser un clique droit puis Nouvel utilisateur
+
+#### 3 \- Maintenant, dans le dossier Utilisateurs, réaliser un clique droit puis Nouvel utilisateur
 
 ![][image16]  
 ![][image17]
 
-4 \- Renseigner le nom et le mot de passe de l’utilisateur  
+#### 4 \- Renseigner le nom et le mot de passe de l’utilisateur  
 ![][image18]  
-nom : adminssh       mot de passe : Cub\_Admin\_Ssh\_007  
+
+**nom** : adminssh       **mot de passe** : Cub\_Admin\_Ssh\_007  
 Cliquer sur créer \!
 
 ## 6 Interdir une connexion SSH avec l’utilisateur “administrateur

@@ -68,10 +68,9 @@ Ce qu’il faut savoir, c’est que le Vlan est déjà directement associé au p
 #### 3 \- Maintenant, dans le dossier Utilisateurs, réaliser un clique droit puis Nouvel utilisateur
 
 ![](../../media/s1-15.png) 
-![](../../media/s1-16.png)
 
 #### 4 \- Renseigner le nom et le mot de passe de l’utilisateur  
-![](../../media/s1-17.png) 
+![](../../media/s1-16.png)
 
 **nom** : adminssh       **mot de passe** : Cub\_Admin\_Ssh\_007  
 Cliquer sur créer \!
@@ -79,26 +78,24 @@ Cliquer sur créer \!
 ## 6 Interdir une connexion SSH avec l’utilisateur “administrateur
 
 Dans le fichier de configuration, il faut commenter les deux lignes suivantes, sinon la directive DenyGroups ne fonctionne pas 
+![](../../media/s1-17(1).png) 
 
-![](../../media/s1-18.png)
+
 
 Pour autoriser seulement mon utilisateur adminssh, j’ai ajouté dans mon document text ceci : 
-
-![](../../media/s1-19.png)
+![](../../media/s1-18(2).png)
 
 Redémarrez le service SSH et tentez de vous connecter à votre serveur avec un compte administrateur, l'accès **doit être refusé \!**
 
 ### **Tester la connexion SSH pour l’utilisateur “adminssh”,** {#tester-la-connexion-ssh-pour-l’utilisateur-“adminssh”,}
 
 Voici le test pour me connecter en SSH avec le nouvel utilisateur : **adminssh**
-
-![](../../media/s1-20.png)
+![](../../media/s1-17.png)
 
 ## 7 Modifier le port d’écoute par défaut ssh en 222
 
 Ensuite, il faut décommenter la ligne "*\#Port 22*" et changer le numéro de port, comme ceci :
-
-![](../../media/s1-21.png)
+![](../../media/s1-18.png)
 
 **Après chaque modification de la config, il est indispensable de redémarrer le service SSH** pour charger les nouveaux paramètres. PowerShell permet de le faire facilement :
 
@@ -109,47 +106,42 @@ Voici la commande pour créer une règle de pare-feu qui autorise les connexions
 - New-NetFirewallRule \-Name sshd \-DisplayName 'OpenSSH Server (sshd) \- Port 222' \-Enabled True \-Direction Inbound \-Protocol TCP \-Action Allow \-LocalPort 222
 
 Je vous invite à en profiter pour désactiver la règle créée par défaut puisqu'elle n'est plus utile :
-
-![](../../media/s1-22.png)
+![](../../media/s1-19.png)
 
 ## 8 Installer l’accès à distance au serveur Windows 2019 via le protocole RDP
 
 Sur Windows Server, l'accès "**Bureau à distance**" que l'on appelle couramment l'accès RDP s'active à partir du "**Gestionnaire de serveur**". Dans la section "**Serveur local**", il y a un paramètre nommé "Bureau à distance" qui indique l'état du service. Lorsque c'est désactivé (valeur par défaut), il n'est pas possible de se connecter en RDP sur la machine, mais cette même machine peut se connecter sur une autre machine où le Bureau à distance est actif.
+![](../../media/s1-20.png)
 
-![](../../media/s1-23.png)
-
-![](../../media/s1-24.png)
+![](../../media/s1-21.png)
 
 Il ne reste plus qu'à cliquer sur "OK" \! L'effet est immédiat. Si cela ne fonctionne pas, il faudra vérifier l'état du pare-feu de Windows ou de la solution de protection afin d'autoriser les connexions entrantes sur le port 3389\.
 
 Pour cela, lancer l’application : Connexion Bureau à distance de windows
 
 ### **Tester l’accès à distance au serveur Windows 2019 via le protocole RDP** {#tester-l’accès-à-distance-au-serveur-windows-2019-via-le-protocole-rdp}
-
-![](../../media/s1-25.png)
+![](../../media/s1-22.png)
 
 Il suffit de renseigner l’ip de notre serveur pour son nom et le nom complet de de l’utilisateur
 
 Pour le moment, nous allons utiliser l'utilisateur **“Administrateur”**
-
-![](../../media/s1-26.png)
+![](../../media/s1-23.png)
 
 ## 9 Tester la connexion RDP pour le compte “adminssh”
 
 Afin de se connecter à distance via l’utilisateur “adminssh”, il suffit d’ajouter cet utilisateur pour avoir les droit de connexion à distance avec ce compte
 
 Pour cela, retourner dans Sur Windows Server, Dans la section "**Serveur local”,** cliquer sur “activé” puis sur **“**S**électionner des utilisateurs”**  
-![](../../media/s1-27.png)
+![](../../media/s1-24.png)
 
 Cliquer sur **“Ajouter”**  
-![](../../media/s1-28.png)
+![](../../media/s1-25.png)
 
 Maintenant, renseignez simplement **“adminssh”** puis cliquez sur **“Vérifier les noms”** et le nom complet s'affiche comme ci-dessous  
-![](../../media/s1-29.png)
+![](../../media/s1-26.png)
 
 Maintenant, on peut voir apparaître le nom de l’utilisateur ajouté  
-![](../../media/s1-30.png)
+![](../../media/s1-27.png)
 
 Maintenant, nous pouvons tester la connexion de bureau à distance avec l’utilisateur adminssh
-
-![][image32]
+![](../../media/s1-28.png)

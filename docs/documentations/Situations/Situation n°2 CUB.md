@@ -8,7 +8,7 @@
 
 ## Administration des systèmes
 
-# **Partie 1 : Installation de l’environnement GIT** 
+## **Partie 1 : Installation de l’environnement GIT** 
 
 ### Question 2
 
@@ -16,7 +16,7 @@
 
 Nous voyons donc la version de git (2.51.0.windows.1)
 
-# **Partie 2 : Initialisation de l’environnement GIT** 
+## **Partie 2 : Initialisation de l’environnement GIT** 
 
 ### Question 5 
 
@@ -32,7 +32,7 @@ Nous venons de créer notre identité
 
 Nous avons créé un dossier “premierdepot”, nous sommes rentrés dedans puis nous avons initialisé ce dépôt.
 
-# **Partie 3 : Gérer les versions (commits) en local** 
+## **Partie 3 : Gérer les versions (commits) en local** 
 
 ### Question 7 
 
@@ -92,7 +92,8 @@ Nous sommes revenu à la dernière version du script donc la 2ème
 ![](../../media/s2-13.png)
 
 Nous avons listé les versions (commits) de notre dépôt  
-**Partie 4 : Gérer les dépôts sur GitHub à distance**
+
+## Partie 4 : Gérer les dépôts sur GitHub à distance
 
 Tout d’abord, nous avons créé un dépôt “premierdepotgithub”  directement sur nôtre compte GitHub.
 

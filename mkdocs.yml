@@ -21,6 +21,7 @@ nav:
           - Situations:
               - Situation n°O - CUB: documentations/Situations/Situation n°0 CUB – Plan d'adressage - Schéma logique & physique - Table de routage - NAT.md
               - Situation n°1 - CUB: documentations/Situations/Situation n°1 CUB.md
+              - Situation n°2 - CUB: documentations/Situations/Situation n°2 CUB.md
       
 markdown_extensions:
   - toc:

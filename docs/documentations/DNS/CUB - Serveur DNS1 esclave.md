@@ -1,6 +1,7 @@
 # Serveur DNS Autorité (Maître) Matéo
 
 **Auteurs :** Matéo Beaugendre
+
 **Date de création :** 09/10/2025
 
 ---

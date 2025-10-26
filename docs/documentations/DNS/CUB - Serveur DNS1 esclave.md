@@ -179,7 +179,13 @@ zone "anvers.cub.sioplc.fr" {
 
 nous retrouvons le numéro sérial du DNS maître 
 
+![image resultat SOA](../../media/img_esclave(M)/img_2.png)
+
 **Test de la résolution DNS**
 
+![image test Reso DNS](../../media/img_esclave(M)/img_3.png)
+
 Résultat de la commande 
+
+![image resultat reso DNS](../../media/img_esclave(M)/img_4.png)
 

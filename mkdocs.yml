@@ -26,8 +26,8 @@ nav:
               - Situation n°2 - CUB: documentations/Situations/Situation n°2 CUB.md
               - Situation n°3 - CUB: documentations/Situations/Situation n°3 CUB.md
           - Configs:
-              -
-              -
+              - Switch 3 - CUB: documentations/Configs/Config Switch 3.md
+              - Switch 2 - CUB: documentations/Configs/Config Switch 2.md
       
 markdown_extensions:
   - toc:

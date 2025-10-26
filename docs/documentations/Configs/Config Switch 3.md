@@ -1,3 +1,5 @@
+# Configuration Switch de niveau 3
+
 Building configuration...
 
 Current configuration : 7275 bytes  

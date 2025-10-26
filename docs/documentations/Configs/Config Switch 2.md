@@ -1,3 +1,5 @@
+# Configuration Switch de niveau 2
+
 version 12.2  
 no service pad  
 service timestamps debug datetime msec  

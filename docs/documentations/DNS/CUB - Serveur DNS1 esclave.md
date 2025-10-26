@@ -55,7 +55,7 @@ gateway 172.16.3.254
 
 - *sudoedit /etc/resolv.conf*  
    
-***après avoir entré la commande il y aura que le nameserver 9.9.9.9 on ajoute un autre DNS public*** 
+***Après avoir entré la commande il y aura que le nameserver 9.9.9.9 on ajoute un autre DNS public*** 
 
 nameserver 86.54.11.100  
 nameserver 9.9.9.9
@@ -64,15 +64,15 @@ nameserver 9.9.9.9
 
 - *sudo systemctl restart networking*
 
-Configurer correctement les fichiers /etc/hostname et /etc/hosts
+**Configurer correctement les fichiers /etc/hostname et /etc/hosts**
 
-Le fichier **hostname** sert à donner un nom à votre serveur.
+**Le fichier hostname sert à donner un nom à votre serveur.**
 
 - sudoedit /etc/hostname
 
 #### 5 - Ajouter le hostname au fichiers /etc/hostname et /etc/hosts
 
- ajouter ns1 dans le fichier 
+ ajouter **ns1** dans le fichier 
 
 - sudoedit /etc/hosts
 

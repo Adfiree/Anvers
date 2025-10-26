@@ -1,17 +1,25 @@
+# Serveur DNS Autorité (Maître) Matéo
 
+**Auteurs :** Matéo Beaugendre
+**Date de création :**09/10/2025
 
-# Contexte : CUB
+---
 
 ![image Cub](../../media/CUB.png)
 
+## Administration et exploitation des services
 
-## Sommaire 
+## Activité 1 - Mise en place du serveur DNS (esclave) faisant autorité au sein de l'entreprise CUB
 
-[Procédure installation DNS esclave]
+---
 
-[Test des DNS faisant autorité esclave et maître]
+### Partie 1 : Réalisation d'un nouveau schéma logique 
 
-## Procédure installation DNS esclave
+![Schéma logique CUB](../../media/a1.png)
+
+### Partie 2 : Installation et paramétrage du serveur DNS (esclave) faisant autorité
+
+#### 1 - Vérification préalable
 
 **Mettez à jour votre serveur**
 
@@ -25,7 +33,7 @@
 
 - *sudo apt install bind9 dnsutils*
 
-**Définir les paramètre réseau du serveur**
+#### 2 - Définir les paramètre réseau du serveur
 
 - *sudoedit /etc/network/interfaces*
 
@@ -43,7 +51,7 @@ address 172.16.3.11
 netmask 255.255.255.0  
 gateway 172.16.3.254
 
-**Définir les serveurs DNS Récursif à utiliser :** 
+#### 3 - Définir les serveurs DNS Récursif à utiliser
 
 - *sudoedit /etc/resolv.conf*  
    
@@ -52,7 +60,7 @@ gateway 172.16.3.254
 nameserver 86.54.11.100  
 nameserver 9.9.9.9
 
-**Prendre en compte les modifications des paramètres réseaux**
+#### 4 - Prendre en compte les modifications des paramètres réseaux
 
 - *sudo systemctl restart networking*
 
@@ -62,11 +70,9 @@ Le fichier **hostname** sert à donner un nom à votre serveur.
 
 - sudoedit /etc/hostname
 
-**ajouter le hostname**
+#### 5 - Ajouter le hostname au fichiers /etc/hostname et /etc/hosts
 
-ns1
-
-dans le fichier 
+ ajouter ns1 dans le fichier 
 
 - sudoedit /etc/hosts
 
@@ -86,7 +92,7 @@ ff02::2 ip6-allrouters
 
 - *sudo shutdown \-r now*
 
-**Exemple de configuration d'un serveur DNS esclave faisant autorité**
+#### 6 - Exemple de configuration d'un serveur DNS esclave faisant autorité
 
 ***Déclaration de la zone que l’on souhaite transférer depuis le serveur maître sur le serveur esclave :***
 
@@ -108,7 +114,7 @@ zone "anvers.cub.sioplc.fr" {
 
 - *sudo chown bind:bind /var/cache/bind/db.anvers.cub.sioplc.fr*
 
-**Mise en place de la journalisation**
+#### 7 - Mise en place de la journalisation
 
 - *sudoedit /etc/bind/named.conf.log*
 
@@ -171,7 +177,7 @@ zone "anvers.cub.sioplc.fr" {
 - *sudo systemctl restart bind9*  
 - *sudo systemctl status bind9*
 
-## Test des DNS faisant autorité esclave et maître {#test-des-dns-faisant-autorité-esclave-et-maître}
+### 8 - Test des DNS faisant autorité esclave et maître
 
 **Vérifier le serial SOA**
 

@@ -25,6 +25,9 @@ nav:
               - Situation n°1 - CUB: documentations/Situations/Situation n°1 CUB.md
               - Situation n°2 - CUB: documentations/Situations/Situation n°2 CUB.md
               - Situation n°3 - CUB: documentations/Situations/Situation n°3 CUB.md
+          - Configs:
+              -
+              -
       
 markdown_extensions:
   - toc:

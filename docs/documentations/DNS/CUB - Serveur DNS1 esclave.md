@@ -175,6 +175,8 @@ zone "anvers.cub.sioplc.fr" {
 
 **Vérifier le serial SOA**
 
+![image test SOA](../../media/img_esclave(M)/img_1.png)
+
 nous retrouvons le numéro sérial du DNS maître 
 
 **Test de la résolution DNS**

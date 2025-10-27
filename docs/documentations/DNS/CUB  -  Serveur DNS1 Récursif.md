@@ -1,6 +1,7 @@
 # Serveur DNS Recursif Matéo
 
 **Auteurs :** Matéo Beaugendre
+
 **Date de création :** 15/10/2025
 
 ---
@@ -55,11 +56,11 @@
 
 - sudoedit /etc/resolv.conf
 
-Puis mettre 8.8.8.8
+***Puis mettre 8.8.8.8***
 
 - nameserver 8.8.8.8 
 
-***Lorsque le service Unbound sera opérationnel, remplacer 8.8.8.8 par 127.0.0.1 et ajouter ensuite le second serveur récursif produit par votre binôme. ***
+***Lorsque le service Unbound sera opérationnel, remplacer 8.8.8.8 par 127.0.0.1 et ajouter ensuite le second serveur récursif produit par votre binôme.***
 
 #### 4. Prendre en compte les modifications des paramètres réseaux
 
@@ -103,7 +104,7 @@ Puis mettre 8.8.8.8
 
 - sudo unbound-checkconf
 
-***Notre serveur récursif va nativement s’adresser aux serveurs faisant autorité sur Internet en sollicitant en premier l’un des serveurs racines. Dans le cas où le serveur récursif serait amené à devoir traiter des domaines locaux qui se trouvent en dehors de l’arborescence DNS réelle (ex : btssio.lan ou epoka.local), il est important de l’indiquer dans le fichier de configuration (/etc/unbound/unbound.conf) de la manière suivante : ***
+***Notre serveur récursif va nativement s’adresser aux serveurs faisant autorité sur Internet en sollicitant en premier l’un des serveurs racines. Dans le cas où le serveur récursif serait amené à devoir traiter des domaines locaux qui se trouvent en dehors de l’arborescence DNS réelle (ex : btssio.lan ou epoka.local), il est important de l’indiquer dans le fichier de configuration (/etc/unbound/unbound.conf) de la manière suivante :***
 
 *\# Comme le domaine btssio.lan est local et en dehors de l’arborescence officielle, il est indispensable*  
 *\# d'indiquer au récursif qu'il doit contacter les serveurs internes faisant autorité*  
@@ -141,7 +142,7 @@ Puis mettre 8.8.8.8
 - sudo apparmor_parser -r /etc/apparmor.d/usr.sbin.unbound  
 - sudo systemctl restart apparmor
 
-***Si l’on souhaite observer les événements journalisés : ***
+***Si l’on souhaite observer les événements journalisés :***
 
 - sudo cat /var/log/unbound.log
 

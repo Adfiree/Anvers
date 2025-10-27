@@ -1,4 +1,4 @@
-# Bienvenue sur la documentation technique de Andy REMY
+# Bienvenue sur la documentation technique de Andy REMY et Matéo Beaugendre
 
 ## À propos
 

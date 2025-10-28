@@ -1,4 +1,4 @@
-# Serveur DNS Autorité (Maître) Matéo
+# Serveur DNS Autorité (Esclave) Matéo
 
 **Auteurs :** Matéo Beaugendre
 
@@ -24,19 +24,19 @@
 
 **Mettez à jour votre serveur**
 
-- *sudo apt update && sudo apt upgrade*
+- sudo apt update && sudo apt upgrade
 
 **Sur votre serveur Debian 12, installez le service de journalisation rsyslog à la place de journalctl. Cela vous permettra de disposer de fichiers de log clairs au format texte situés dans /var/log*.***
 
-- *sudo apt install rsyslog*
+- sudo apt install rsyslog
 
 **Installez le service Bind 9 et les outils diagnostics DNS**
 
-- *sudo apt install bind9 dnsutils*
+- sudo apt install bind9 dnsutils
 
 #### 2 - Définir les paramètre réseau du serveur
 
-- *sudoedit /etc/network/interfaces*
+- sudoedit /etc/network/interfaces
 
 source /etc/network/interfaces.d/\*
 
@@ -54,7 +54,7 @@ gateway 172.16.3.254
 
 #### 3 - Définir les serveurs DNS Récursif à utiliser
 
-- *sudoedit /etc/resolv.conf*  
+- sudoedit /etc/resolv.conf  
    
 ***Après avoir entré la commande il y aura que le nameserver 9.9.9.9 on ajoute un autre DNS public*** 
 

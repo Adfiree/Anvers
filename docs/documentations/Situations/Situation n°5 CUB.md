@@ -14,11 +14,11 @@
 
 Pour commencer, nous allons ajouter la fonctionnalité “service AD DS” et procéder à son installation classique.
 
-![](../../media/CUB/s5-1.png)  
+![1](../../media/CUB/s5-1.png)  
 
 Une fois que AD DS est bien installé, vous devrez avoir cette page : 
 
-![](../../media/CUB/s5-2.png)  
+![2](../../media/CUB/s5-2.png)  
 
 ## **II - Ajouter une nouvelle forêt** 
 

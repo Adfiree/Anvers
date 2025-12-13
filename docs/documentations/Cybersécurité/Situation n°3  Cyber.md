@@ -7,9 +7,9 @@
 ![Logo CUB](../../media/CUB.png)
 
 
-[**Question 1 : Rédiger la table de routage du par-feu Stormshield de votre agence.	3**](#question-1-:-rédiger-la-table-de-routage-du-par-feu-stormshield-de-votre-agence.)
+### Question 1 : Rédiger la table de routage du par-feu Stormshield de votre agence.	3
 
-[par feu stormshield	3](#par-feu-stormshield)
+[par feu stormshield](../../media/Cybersécurité/S3-1.png)
 
 [**Question 2 : Déterminer quelle adresse IP du WAN doit servir de passerelle pour aller sur internet ? Puis créer un objet réseau afin que cette adresse IP soit représentée dans l’interface d’administration.	3**](#question-2-:-déterminer-quelle-adresse-ip-du-wan-doit-servir-de-passerelle-pour-aller-sur-internet-?-puis-créer-un-objet-réseau-afin-que-cette-adresse-ip-soit-représentée-dans-l’interface-d’administration.)
 

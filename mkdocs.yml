@@ -8,8 +8,8 @@ theme:
   features:
     - content.code.copy
   palette:
-    primary: indigo
-    accent: vert
+    primary: green
+    accent: teal
 
 nav:
   - Accueil: index.md

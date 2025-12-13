@@ -6,7 +6,9 @@
 ---
 ![Logo CUB](../../media/CUB.png)
 
-1. ### Modifier votre maquettes afin de prendre en compte l’activation du service DHCP 
+## Administration des systèmes
+
+### 1. Modifier votre maquettes afin de prendre en compte l’activation du service DHCP 
 
 Pour mettre en place le DHCP sur la maquette il suffit d’activer le service "Créer les pools" pour chaque vlan puis sur le switch de niveau 3 il faut saisir sur les vlan 10 et 20 le IP helper puis l’adresse du serveur DHCP.   
 Et le résultat est que cela fournit une ip à chaque poste suivant leur vlan assigner.

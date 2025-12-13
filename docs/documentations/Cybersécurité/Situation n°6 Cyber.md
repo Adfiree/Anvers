@@ -30,3 +30,6 @@
 | 9 | \* | entré | \* | \* | \* | \* | \* | nouvelle | Bloquer |
 
 Question A à C  
+
+![S6-1](../../media/Cybersécurité/S6-1.png)
+

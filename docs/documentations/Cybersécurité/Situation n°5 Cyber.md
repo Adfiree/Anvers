@@ -1,13 +1,13 @@
 # Situation n°5 Cybersécurité
 
-**Auteur :** Matéo Beaugendre 
+**Auteur :** Matéo Beaugendre
 **Date de création :** 13/12/2025  
 
 ---
 ![Logo CUB](../../media/CUB.png)
 
 
- ### Question 1 : Rappeler la définition et les enjeux de la notion de moindre privilège pour les comptes d’administrations des serveurs. 
+### Question 1 : Rappeler la définition et les enjeux de la notion de moindre privilège pour les comptes d’administrations des serveurs. 
 
 Le **principe du moindre privilège** stipule que :
 

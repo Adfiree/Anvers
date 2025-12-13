@@ -1,30 +1,13 @@
+# Situation n°5 Cybersécurité
+
+**Auteur :** Matéo Beaugendre 
+**Date de création :** 13/12/2025  
+
+---
+![Logo CUB](../../media/CUB.png)
 
 
-# Contexte : CUB
-
-# 
-
-# Sommaire {#sommaire}
-
-[**Sommaire	2**](#sommaire)
-
-[1\) Rappeler la définition et les enjeux de la notion de moindre privilège pour les comptes d’administrations des serveurs.	3](#rappeler-la-définition-et-les-enjeux-de-la-notion-de-moindre-privilège-pour-les-comptes-d’administrations-des-serveurs.)
-
-[2\) Résumer ce qu’est une solution de gestion des accès à privilèges ou PAM en précisant les fonctionnalités de ces composantes.	4](#résumer-ce-qu’est-une-solution-de-gestion-des-accès-à-privilèges-ou-pam-en-précisant-les-fonctionnalités-de-ces-composantes.)
-
-[3\) Préciser les bonnes pratiques à respecter lors de la mise en place d’une solution PAM.	6](#3\)-préciser-les-bonnes-pratiques-à-respecter-lors-de-la-mise-en-place-d’une-solution-pam.)
-
-[4\) Expliquer le lien entre une solution PAM et la mise en place d’un SIEM/SOC	6](#4\)-expliquer-le-lien-entre-une-solution-pam-et-la-mise-en-place-d’un-siem/soc)
-
-[5\) Retrouver dans la documentation de l’ANSSI sur “ les recommandations relatives à l'administration sécurisée des SI ” la partie consacrée à la mise en place d’un bastion. Relever la première mise en garde et indiquer en quoi la solution WALLIX est-elle une solution recommandée pour CUB.	7](#5\)-retrouver-dans-la-documentation-de-l’anssi-sur-“-les-recommandations-relatives-à-l'administration-sécurisée-des-si-”-la-partie-consacrée-à-la-mise-en-place-d’un-bastion.-relever-la-première-mise-en-garde-et-indiquer-en-quoi-la-solution-wallix-est-elle-une-solution-recommandée-pour-cub.)
-
-## 
-
-## 
-
-## 
-
-1) ## Rappeler la définition et les enjeux de la notion de moindre privilège pour les comptes d’administrations des serveurs. {#rappeler-la-définition-et-les-enjeux-de-la-notion-de-moindre-privilège-pour-les-comptes-d’administrations-des-serveurs.}
+ ### Question 1 : Rappeler la définition et les enjeux de la notion de moindre privilège pour les comptes d’administrations des serveurs. 
 
 Le **principe du moindre privilège** stipule que :
 
@@ -32,79 +15,78 @@ Chaque utilisateur, application ou service doit disposer uniquement des privilè
 
 Les enjeux du moindre privilège sont : 
 
-**Réduction de la surface d’attaque**  
+- **Réduction de la surface d’attaque**  
 Moins de privilèges signifie moins de possibilités d’exploitation en cas de compromission.
 
-**Limitation des dommages**  
+- **Limitation des dommages**  
 Si un compte est compromis, l’impact est limité aux ressources auxquelles il a effectivement accès.
 
-**Conformité réglementaire**  
+- **Conformité réglementaire**  
 Principe souvent exigé par les normes de sécurité (ISO 27001, ANSSI, RGPD, NIST, etc.).
 
-**Traçabilité et responsabilité**  
+- **Traçabilité et responsabilité**  
 Chaque action peut être attribuée à un utilisateur ou à un rôle précis, facilitant l’audit et la détection d’anomalies.
 
-**Réduction des erreurs humaines**  
+- **Réduction des erreurs humaines**  
 Moins de droits signifie aussi moins de risques d’actions involontaires dangereuses
 
-2) ## Résumer ce qu’est une solution de gestion des accès à privilèges ou PAM en précisant les fonctionnalités de ces composantes. {#résumer-ce-qu’est-une-solution-de-gestion-des-accès-à-privilèges-ou-pam-en-précisant-les-fonctionnalités-de-ces-composantes.}
+2) ### Résumer ce qu’est une solution de gestion des accès à privilèges ou PAM en précisant les fonctionnalités de ces composantes. 
 
-Le PAM vise à appliquer le principe du moindre privilège en encadrant strictement l’accès aux ressources critiques. Il permet de réduire les risques liés aux comptes à privilèges : compromission, abus d’accès, erreurs humaines ou non-conformité réglementaire.
+**Le PAM vise à appliquer le principe du moindre privilège en encadrant strictement l’accès aux ressources critiques. Il permet de réduire les risques liés aux comptes à privilèges : compromission, abus d’accès, erreurs humaines ou non-conformité réglementaire.**
 
 1. **Gestion et rotation des identifiants privilégiés (Vaulting)**
 
-Stockage sécurisé des identifiants (coffre-fort chiffré).
+- Stockage sécurisé des identifiants (coffre-fort chiffré).
 
-Rotation automatique et régulière des mots de passe.
+- Rotation automatique et régulière des mots de passe.
 
-Suppression de la connaissance directe des mots de passe par les utilisateurs.
+- Suppression de la connaissance directe des mots de passe par les utilisateurs.
 
 2. **Contrôle des accès privilégiés (Access Control)**
 
-Attribution temporaire ou à la demande des droits élevés (« *Just-in-Time Access* »).
+- Attribution temporaire ou à la demande des droits élevés (« *Just-in-Time Access* »).
 
-Gestion des autorisations selon les rôles et les contextes.
+- Gestion des autorisations selon les rôles et les contextes.
 
-Validation ou approbation préalable avant certaines opérations sensibles.
+- Validation ou approbation préalable avant certaines opérations sensibles.
 
 3. **Surveillance et enregistrement des sessions (Session Management & Recording)**
 
-Journalisation complète des connexions privilégiées.
+- Journalisation complète des connexions privilégiées.
 
-Enregistrement vidéo ou textuel des actions réalisées.
+- Enregistrement vidéo ou textuel des actions réalisées.
 
-Alertes en cas de comportement suspect ou non conforme.
+- Alertes en cas de comportement suspect ou non conforme.
 
 4. **Audit et traçabilité (Audit & Reporting)**
 
-Rapports détaillés sur l’usage des comptes à privilèges.
+- Rapports détaillés sur l’usage des comptes à privilèges.
 
-Aide à la conformité (ISO 27001, NIST, RGPD, ANSSI…).
+- Aide à la conformité (ISO 27001, NIST, RGPD, ANSSI…).
 
-Analyse post-incident pour identifier les causes d’une faille.
+- Analyse post-incident pour identifier les causes d’une faille.
 
-**Élévation et délégation de privilèges (Privilege Elevation & Delegation Management)**
+5. **Élévation et délégation de privilèges (Privilege Elevation & Delegation Management)**
 
-Permet à un utilisateur d’obtenir temporairement des privilèges spécifiques sans utiliser un compte admin complet.
+- Permet à un utilisateur d’obtenir temporairement des privilèges spécifiques sans utiliser un compte admin complet.
 
-Réduit l’usage de comptes partagés ou permanents.
+- Réduit l’usage de comptes partagés ou permanents.
 
-## 3\) Préciser les bonnes pratiques à respecter lors de la mise en place d’une solution PAM. {#3)-préciser-les-bonnes-pratiques-à-respecter-lors-de-la-mise-en-place-d’une-solution-pam.}
+3) ###  Préciser les bonnes pratiques à respecter lors de la mise en place d’une solution PAM.
 
 Les bonnes pratiques à respecter lors de la mise en place d’une solution PAM sont : 
 
 Dans un premier temps définir une politique claire de gestion des comptes à privilèges , Séparer les comptes et les usages ,Sécuriser la gestion des identifiants,  
 Contrôler et limiter l’accès aux privilèges,Surveiller et auditer en continu,Intégrer le PAM dans l’écosystème de sécurité et il est important d’accompagner et former les utilisateurs.
 
-## 4\) Expliquer le lien entre une solution PAM et la mise en place d’un SIEM/SOC {#4)-expliquer-le-lien-entre-une-solution-pam-et-la-mise-en-place-d’un-siem/soc}
+4) ### Expliquer le lien entre une solution PAM et la mise en place d’un SIEM/SOC
 
 Une solution PAM, en contrôlant et en enregistrant toutes les actions réalisées via les comptes à privilèges, fournit au SIEM des journaux détaillés et horodatés permettant la corrélation avec d’autres événements de sécurité, ce qui offre au SOC une visibilité complète sur les activités sensibles, facilite la détection des comportements anormaux, renforce la traçabilité et la conformité, et permet ainsi une supervision proactive et une réaction rapide en cas d’incident.
 
-## 5\) Retrouver dans la documentation de l’ANSSI sur “ les recommandations relatives à l'administration sécurisée des SI ” la partie consacrée à la mise en place d’un bastion. Relever la première mise en garde et indiquer en quoi la solution WALLIX est-elle une solution recommandée pour CUB. {#5)-retrouver-dans-la-documentation-de-l’anssi-sur-“-les-recommandations-relatives-à-l'administration-sécurisée-des-si-”-la-partie-consacrée-à-la-mise-en-place-d’un-bastion.-relever-la-première-mise-en-garde-et-indiquer-en-quoi-la-solution-wallix-est-elle-une-solution-recommandée-pour-cub.}
+5) ### Retrouver dans la documentation de l’ANSSI sur “ les recommandations relatives à l'administration sécurisée des SI ” la partie consacrée à la mise en place d’un bastion. Relever la première mise en garde et indiquer en quoi la solution WALLIX est-elle une solution recommandée pour CUB. 
 
 La solution WALLIX est recommandée car il a été certifié CSPN (Certification de Sécurité de Premier Niveau) par l’ANSSI, ce qui garantit que la solution a été évaluée sur plusieurs menaces notables et qu’elle répond à des exigences formelles de sécurité en matière de contrôle d’accès, cryptographie, intégrité des journaux, etc.  
 Il permet de centraliser les accès à privilèges, d’en assurer la traçabilité et le renouvellement des secrets.
 
 Ainsi que d’isoler le bastion dans une zone de confiance du SI (par exemple dans le SI administratif / infrastructure, non sur le réseau bureautique exposé) et de respecter le principe du moindre privilège, d’utiliser des accès temporaires ou limités selon les rôles, etc.
 
-## 

@@ -6,55 +6,73 @@
 ---
 ![Logo CUB](../../media/CUB.png)
 
-1. ## Modifier votre maquettes afin de prendre en compte l’activation du service DHCP {#modifier-votre-maquettes-afin-de-prendre-en-compte-l’activation-du-service-dhcp}
+1. ### Modifier votre maquettes afin de prendre en compte l’activation du service DHCP 
 
 Pour mettre en place le DHCP sur la maquette il suffit d’activer le service "Créer les pools" pour chaque vlan puis sur le switch de niveau 3 il faut saisir sur les vlan 10 et 20 le IP helper puis l’adresse du serveur DHCP.   
 Et le résultat est que cela fournit une ip à chaque poste suivant leur vlan assigner.
 
-2. ## Rédiger la fiche de tests de votre maquette et faire valider celle-ci par votre enseignant. {#rédiger-la-fiche-de-tests-de-votre-maquette-et-faire-valider-celle-ci-par-votre-enseignant.}
+### 2. Rédiger la fiche de tests de votre maquette et faire valider celle-ci par votre enseignant. 
 
 Pour effectuer le test de notre maquette il suffit d’aller sur le poste d’un de nos vlan puis activer le DHCP sur le poste afin de recevoir une ip de la pool.
 
-3. ## activer et paramétrer le service DHCP sur notre serveur Primaire. {#activer-et-paramétrer-le-service-dhcp-sur-notre-serveur-primaire.}
+![S4-1](../../media/CUB/S4-1.png)
+
+### 3. activer et paramétrer le service DHCP sur notre serveur Primaire.
 
 Au sein du "**Gestionnaire de serveur**", cliquez sur "**Gérer**" et "**Ajouter des rôles et fonctionnalités**".
 
+![S4-2](../../media/CUB/S4-2.png)
+
 Choisissez l'option "**Installation basée sur un rôle ou une fonctionnalité**" et poursuivez.
+
+![S4-3](../../media/CUB/S4-3.png)
 
 Poursuivez directement, car le serveur local est déjà sélectionné.
 
+![S4-4](../../media/CUB/S4-4.png)
+
 Dans la liste des rôles, cochez "**Serveur DHCP**" et au sein de la fenêtre qui s'affiche, vérifiez que l'option "**Inclure les outils de gestion**" soit cochée. Elle permet d'ajouter la console de gestion DHCP sur le serveur. Cliquez sur "**Ajouter des fonctionnalités**".
+
+![S4-5](../../media/CUB/S4-5.png)
 
 L'assistant nous rappelle qu'il faut avoir **une adresse IP statique sur le serveur DHCP** avant de procéder à l'installation de ce rôle. Si c'est bien le cas, cliquez sur "**Suivant**", sinon configurez votre interface réseau.
 
+![S4-6](../../media/CUB/S4-6.png)
+
 Voici la dernière étape de l'assistant, cliquez sur "**Installer**". Il ne sera pas nécessaire de redémarrer le serveur à la fin de l'installation.
+
+![S4-7](../../media/CUB/S4-7.png)
 
 Lorsque l'installation est terminée, passez à l'étape suivante.
 
-4. ## Autoriser le serveur DHCP dans l'Active Directory {#autoriser-le-serveur-dhcp-dans-l'active-directory}
+### 4. Autoriser le serveur DHCP dans l'Active Directory 
 
 Dans le "**Gestionnaire de serveur**", il y a un avertissement en haut à droite. Cliquez sur l'icône puis sur "**Terminer la configuration DHCP**".
 
-## 
+![S4-8](../../media/CUB/S4-8.png)
 
-5. ## création de l’étendu DHCP avec le documents 1 {#création-de-l’étendu-dhcp-avec-le-documents-1}
+### 5. création de l’étendu DHCP avec le documents 1 {#création-de-l’étendu-dhcp-avec-le-documents-1}
 
-l’etendu DHCP pour la pools administration a etait réaliser via l’interface graphique
+l’etendu DHCP pour la pools administration a était réaliser via l’interface graphique
+
+![S4-9](../../media/CUB/S4-9.png)
 
 Pour l’étendu Via l’interface powershell pour la pools clients il faudra effectuer la commande
+
+![S4-10](../../media/CUB/S4-10.png)
 
 cela a donc créé l'étendue en disant la première adresse ainsi que la dernière et le masque puis lui dire de l’activer  
 pour ajouter le Bails
 
+![S4-11](../../media/CUB/S4-11.png)
+
 Pour ajouter le Dns et le nom de domaine j’ai effectuer cette commande
 
-![][image1]
+![S4-12](../../media/CUB/S4-12.png)
 
 Et pour ajouter la passerelle   
-![][image2]
+
+![S4-13](../../media/CUB/S4-13.png)
 
 Pour la suite voir les fiche procédure réalisée 
 
-[image1]: <data:image/png;base64,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>
-
-[image2]: <data:image/png;base64,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>

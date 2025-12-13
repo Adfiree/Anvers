@@ -6,7 +6,7 @@
 ---
 ![Logo CUB](../../media/CUB.png)
 
-## Administration des systèmes
+## Administration des systèmes (Cybersécurité)
 
 ### Question 1 : Rappeler la définition et les enjeux de la notion de moindre privilège pour les comptes d’administrations des serveurs. 
 

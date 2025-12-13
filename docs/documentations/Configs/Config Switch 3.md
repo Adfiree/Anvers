@@ -14,10 +14,10 @@ hostname Switch
 \!
 \!
 vrf definition Mgmt-vrf
- \!
+ !
  address-family ipv4
  exit-address-family
- \!
+ !
  address-family ipv6
  exit-address-family
 \!

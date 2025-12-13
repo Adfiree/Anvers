@@ -9,7 +9,7 @@ theme:
     - content.code.copy
   palette:
     primary: indigo
-    accent: blue
+    accent: vert
 
 nav:
   - Accueil: index.md

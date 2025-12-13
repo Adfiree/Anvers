@@ -16,7 +16,7 @@
 | 3 | 192.36.253.10 | entré | \* | \* | 192.36.253.10 | \* | \* | nouvelle | Bloquer |
 | 3 | 192.36.1.254 | entré | \* | \* | 192.36.1.254 | \* | \* | nouvelle | Bloquer |
 | 6 règle 4 | 192.168.11.254 | entré | 192.168.1.128 /26 | \* | 192.168.11.254 | \* | \* | nouvelle | Bloquer |
-| Section 4 \- Règles d’autorisation des flux métiers |  |  |  |  |  |  |  |  |  |
+| Section 4 \- Règles d’autorisation des flux métiers |
 | 3 règle 1 | 192.168.11.254 | entré | 192.168.1.0/24 | \* | 192.36.1.20/24 | 80,443 | tcp | nouvelle | autoriser |
 | 4 règle 2 | 192.168.11.254 | entré | 192.168.1.192/28 | \* | 192.36.1.0/24 | \* | \* | nouvelle | autoriser |
 | 5 règle 3 | 192.168.11.254 | entré | 192.168.1.0/24 | \* | \* | 123 | UDP | nouvelle | autoriser |

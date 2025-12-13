@@ -1,13 +1,9 @@
 # Configuration Switch de niveau 3
 
 Current configuration : 9925 bytes
-
 \!
-
 \! Last configuration change at 14:18:29 UTC Fri Nov 21 2025 by admin
-
 \!
-
 version 17.6
 service timestamps debug datetime msec
 service timestamps log datetime msec

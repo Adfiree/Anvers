@@ -30,7 +30,7 @@ Chaque action peut être attribuée à un utilisateur ou à un rôle précis, fa
 - **Réduction des erreurs humaines**  
 Moins de droits signifie aussi moins de risques d’actions involontaires dangereuses
 
-2) ### Résumer ce qu’est une solution de gestion des accès à privilèges ou PAM en précisant les fonctionnalités de ces composantes. 
+### Question 2 : Résumer ce qu’est une solution de gestion des accès à privilèges ou PAM en précisant les fonctionnalités de ces composantes. 
 
 **Le PAM vise à appliquer le principe du moindre privilège en encadrant strictement l’accès aux ressources critiques. Il permet de réduire les risques liés aux comptes à privilèges : compromission, abus d’accès, erreurs humaines ou non-conformité réglementaire.**
 
@@ -72,18 +72,18 @@ Moins de droits signifie aussi moins de risques d’actions involontaires danger
 
 - Réduit l’usage de comptes partagés ou permanents.
 
-3) ###  Préciser les bonnes pratiques à respecter lors de la mise en place d’une solution PAM.
+### Question 3 : Préciser les bonnes pratiques à respecter lors de la mise en place d’une solution PAM.
 
-Les bonnes pratiques à respecter lors de la mise en place d’une solution PAM sont : 
+Les bonnes pratiques à respecter lors de la mise en place d’une solution **PAM** sont : 
 
 Dans un premier temps définir une politique claire de gestion des comptes à privilèges , Séparer les comptes et les usages ,Sécuriser la gestion des identifiants,  
 Contrôler et limiter l’accès aux privilèges,Surveiller et auditer en continu,Intégrer le PAM dans l’écosystème de sécurité et il est important d’accompagner et former les utilisateurs.
 
-4) ### Expliquer le lien entre une solution PAM et la mise en place d’un SIEM/SOC
+### Question 4 : Expliquer le lien entre une solution PAM et la mise en place d’un SIEM/SOC
 
 Une solution PAM, en contrôlant et en enregistrant toutes les actions réalisées via les comptes à privilèges, fournit au SIEM des journaux détaillés et horodatés permettant la corrélation avec d’autres événements de sécurité, ce qui offre au SOC une visibilité complète sur les activités sensibles, facilite la détection des comportements anormaux, renforce la traçabilité et la conformité, et permet ainsi une supervision proactive et une réaction rapide en cas d’incident.
 
-5) ### Retrouver dans la documentation de l’ANSSI sur “ les recommandations relatives à l'administration sécurisée des SI ” la partie consacrée à la mise en place d’un bastion. Relever la première mise en garde et indiquer en quoi la solution WALLIX est-elle une solution recommandée pour CUB. 
+### Question 5 : Retrouver dans la documentation de l’ANSSI sur “ les recommandations relatives à l'administration sécurisée des SI ” la partie consacrée à la mise en place d’un bastion. Relever la première mise en garde et indiquer en quoi la solution WALLIX est-elle une solution recommandée pour CUB. 
 
 La solution WALLIX est recommandée car il a été certifié CSPN (Certification de Sécurité de Premier Niveau) par l’ANSSI, ce qui garantit que la solution a été évaluée sur plusieurs menaces notables et qu’elle répond à des exigences formelles de sécurité en matière de contrôle d’accès, cryptographie, intégrité des journaux, etc.  
 Il permet de centraliser les accès à privilèges, d’en assurer la traçabilité et le renouvellement des secrets.

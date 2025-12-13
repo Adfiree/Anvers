@@ -17,12 +17,12 @@ nav:
   - CUB Anvers:
       - Documentations:
           - Cybersécurité:
-              - Situation n°1 - Cybersécurité: documentations/Cybersécurité/Situation n°1 Cyber.md
-              - Situation n°2 - Cybersécurité: documentations/Cybersécurité/Situation n°2 Cyber.md
-              - Situation n°3 - Cybersécurité: documentations/Cybersécurité/Situation n°3 Cyber.md
-              - Situation n°4 - Cybersécurité: documentations/Cybersécurité/Situation n°4 Cyber.md
-              - Situation n°5 - Cybersécurité: documentations/Cybersécurité/Situation n°5 Cyber.md
-              - Situation n°6 - Cybersécurité: documentations/Cybersécurité/Situation n°6 Cyber.md
+              - Situation n°1 - Cyber: documentations/Cybersécurité/Situation n°1 Cyber.md
+              - Situation n°2 - Cyber: documentations/Cybersécurité/Situation n°2 Cyber.md
+              - Situation n°3 - Cyber: documentations/Cybersécurité/Situation n°3 Cyber.md
+              - Situation n°4 - Cyber: documentations/Cybersécurité/Situation n°4 Cyber.md
+              - Situation n°5 - Cyber: documentations/Cybersécurité/Situation n°5 Cyber.md
+              - Situation n°6 - Cyber: documentations/Cybersécurité/Situation n°6 Cyber.md
           - DNS:
               - DNS0 - Récursif - CUB: documentations/DNS/CUB - Serveur DNS Recursif.md
               - DNS1 - Récursif - CUB: documentations/DNS/CUB - Serveur DNS1 Recursif.md

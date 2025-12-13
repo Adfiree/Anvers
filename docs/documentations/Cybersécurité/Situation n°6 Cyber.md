@@ -29,7 +29,9 @@
 | Section 6 \- Règle d’interdiction finale |  |  |  |  |  |  |  |  |  |
 | 9 | \* | entré | \* | \* | \* | \* | \* | nouvelle | Bloquer |
 
-Question A à C  
+### Question A : Interdire explicitement les plages d’adresses du groupe RFC 5735 provenant d’Internet. 
+### Question B : Toutes les machines provenant d’Internet et ayant une réputation de Botnet, Malware,Scanneur, Noeud de sortie Tor, Anonymiseur ou Phishing ont interdiction d’accéder aux services accessibles en DMZ (HTTP et DNS).
+### Question C : L’ensemble des hôtes du site ont interdiction de pouvoir émettre des requêtes vers des machines sur Internet considérées comme Botnet, Malware, Scanneur, Noeud de sortie Tor, Anonymiseur ou Phishing.
 
 ![S6-1](../../media/Cybersécurité/S6-1.png)
 

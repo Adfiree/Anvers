@@ -2,8 +2,8 @@ site_name: Le contexte CUB Anvers
 site_url: https://Andy-Remy.github.io/Anvers
 theme:
   name: material
-  logo: media/LogoAccueil.png
-  favicon: media/LogoAccueil.png
+  logo: media/logoAccueil.png
+  favicon: media/logoAccueil.png
   language: fr
   features:
     - content.code.copy
